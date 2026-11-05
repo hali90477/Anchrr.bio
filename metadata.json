@@ -1,0 +1,6 @@
+{
+  "name": "Anchrr",
+  "description": "Full-Stack, Responsive Creator Platform — Bio Links, Smart Links, Analytics & Integrations",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

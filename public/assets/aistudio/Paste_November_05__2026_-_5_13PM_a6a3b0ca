@@ -1,0 +1,1100 @@
+ANCHRR — MASTER SAAS BUILD PROMPT
+
+Full-Stack, Responsive Creator Platform | Replit Test Build
+
+1. YOUR ROLE
+
+Act as a senior SaaS product engineer, full-stack developer, UI/UX designer, database architect, and product-minded technical lead.
+
+Your task is to build Anchrr, a modern, web-based SaaS platform for content creators, influencers, personal brands, and online businesses.
+
+Do not build merely a landing page, static prototype, or collection of disconnected UI screens. Build a functional, integrated web application with a real frontend, backend, database, authentication, creator dashboard, and public-facing creator pages.
+
+The application should look and behave like a serious commercial SaaS product.
+
+Important project context: This is an experimental test build to evaluate Replit's development capabilities. The product requirements are an evolving specification, not the final approved product scope. Implement the described functionality as a coherent working version, but keep the architecture modular and easy to modify.
+
+Do not unnecessarily invent new product features or permanently lock undecided product choices.
+
+---
+
+2. PRODUCT VISION
+
+Anchrr is a conversion-focused creator platform built around three major product pillars:
+
+1. Bio Links & Profile — A customizable public page where creators showcase their identity, content, social channels, and important links.
+2. Smart Links & URL Shortener — A powerful link-management system that creates, organizes, redirects, and tracks smart URLs.
+3. Analytics — A detailed analytics workspace that helps creators understand their audience, traffic, clicks, visitor journeys, and conversions.
+
+These three pillars should work together as one connected SaaS ecosystem.
+
+The platform should be designed for a global audience, not just one country.
+
+Core product philosophy
+
+- Simple user experience.
+- Powerful functionality behind a clean interface.
+- Conversion-focused design.
+- Fast loading and responsive pages.
+- Clear analytics and actionable insights.
+- Scalable architecture.
+- Easy navigation for non-technical creators.
+
+---
+
+3. TECHNOLOGY STACK
+
+Use the following preferred technology stack:
+
+Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Modern reusable UI components
+- Lucide icons
+
+Backend
+
+- Supabase
+- Supabase Authentication
+- PostgreSQL database
+- Supabase Storage
+- Secure server-side operations
+
+Application
+
+- Build and run the application in Replit.
+- Use environment variables for secrets and configuration.
+- Keep frontend, backend, and database responsibilities properly separated.
+- Use reusable components and maintainable project structure.
+
+If a specific package or integration is unavailable in the Replit environment, choose a compatible alternative without breaking the architecture.
+
+Never expose Supabase service-role keys, API secrets, or private credentials in client-side code.
+
+---
+
+4. DESIGN AND USER EXPERIENCE
+
+The overall design must feel premium, modern, minimalist, and professional.
+
+Take inspiration from modern SaaS dashboards and premium creator tools, but do not copy another company's product or interface.
+
+Design direction
+
+- Clean and minimalist layouts.
+- Balanced whitespace.
+- Beautiful typography.
+- Soft borders and subtle shadows.
+- Rounded cards and modern components.
+- Consistent spacing.
+- Clear visual hierarchy.
+- Smooth but subtle interactions.
+- Attractive empty states.
+- Useful loading and error states.
+- Professional icons.
+- Consistent design system.
+
+Use a modern, uncluttered dashboard design. The public creator pages should feel visually attractive and customizable.
+
+Avoid:
+
+- Excessive gradients.
+- Unnecessary animations.
+- Overcrowded dashboards.
+- Too many colors.
+- Generic template-like designs.
+- Oversized unnecessary sections.
+- Inconsistent buttons and components.
+
+The dashboard should feel like a premium SaaS workspace, while public creator pages should have their own independent visual identity.
+
+---
+
+5. RESPONSIVE WEB APPLICATION
+
+Anchrr is a web-based SaaS platform.
+
+It must work beautifully on:
+
+- Desktop computers.
+- Laptops.
+- Tablets.
+- Android smartphones.
+- iPhones.
+- Different screen sizes and orientations.
+
+Mobile responsiveness is mandatory, not an optional improvement.
+
+Responsive requirements
+
+- Desktop sidebar should adapt into a mobile navigation pattern.
+- Dashboard cards must rearrange intelligently.
+- Tables must remain usable on smaller screens.
+- Modals and popups must fit mobile screens.
+- Forms must be mobile-friendly.
+- Creator profile pages must be optimized for mobile visitors.
+- Buttons and interactive elements must have comfortable touch targets.
+- No horizontal overflow.
+- No overlapping content.
+- No broken layouts at common screen widths.
+
+Use a mobile-first approach where appropriate.
+
+Do not simply shrink the desktop interface to fit mobile. Design proper responsive layouts.
+
+---
+
+6. PUBLIC MARKETING WEBSITE
+
+Create a professional public website for Anchrr.
+
+Main pages
+
+- Home
+- Features
+- Pricing
+- About
+- Contact
+- Login
+- Sign Up
+- Terms of Service
+- Privacy Policy
+
+Homepage
+
+Create a premium SaaS landing page that explains the Anchrr product.
+
+Include:
+
+- Hero section.
+- Clear headline and supporting description.
+- Primary call-to-action: Get Started.
+- Secondary call-to-action: Explore Features.
+- Product/dashboard preview.
+- Bio Links feature explanation.
+- Smart Links feature explanation.
+- Analytics feature explanation.
+- Benefits for creators.
+- Feature highlights.
+- Pricing preview.
+- FAQ section.
+- Footer with important links.
+
+The design should communicate that Anchrr is more than a basic link-in-bio tool.
+
+Do not make unsupported claims such as guaranteed revenue, guaranteed conversions, or unlimited functionality.
+
+---
+
+7. CREATOR AUTHENTICATION
+
+Create a complete creator authentication system.
+
+Signup methods
+
+Only implement:
+
+1. Continue with Google.
+2. Email and Password.
+
+Do not add Apple, Facebook, or phone OTP signup in this test version.
+
+Signup form
+
+Fields:
+
+- Full Name
+- Email Address
+- Password
+
+Username and creator profile details should be handled during onboarding rather than the initial signup form.
+
+Email verification
+
+- Email/password signup must require email verification.
+- Unverified users must not access the authenticated creator dashboard.
+- Display a verification-required screen.
+- Provide a resend verification email option.
+- Allow users to correct their email address if they entered it incorrectly.
+- Google signup can accept Google's verified email status without an additional verification step.
+
+Login page
+
+Include:
+
+- Email.
+- Password.
+- Remember Me.
+- Forgot Password.
+- Login button.
+- Continue with Google.
+- Sign Up link.
+
+Forgot password
+
+Implement a complete password recovery flow:
+
+1. User enters registered email.
+2. A secure password reset email is sent.
+3. User opens the reset link.
+4. User sets a new password.
+5. Display success or error feedback.
+
+Use secure, expiring reset links through the authentication provider.
+
+Account security
+
+Provide account settings for:
+
+- Change Password.
+- Logout.
+- Logout from All Devices.
+- Active Sessions / Logged-in Devices, where supported by the authentication architecture.
+- Account Deletion.
+
+All security-sensitive actions must be handled securely on the server side.
+
+---
+
+8. CREATOR ONBOARDING
+
+After signup and successful verification, introduce the creator to Anchrr.
+
+Onboarding flow
+
+1. Welcome to Anchrr.
+2. Explain the creator workspace briefly.
+3. Ask the creator to choose a unique username.
+4. Check username availability.
+5. Display the proposed public profile URL.
+6. Allow the creator to confirm the username.
+7. Complete basic account setup.
+8. Continue to the dashboard.
+
+For this test implementation, make username selection a required onboarding step before the creator can publish a profile.
+
+This is a provisional test-build decision, not a permanently finalized product rule.
+
+Username requirements
+
+- Unique usernames.
+- Lowercase URL-friendly format.
+- Validate allowed characters.
+- Prevent duplicate usernames.
+- Prevent reserved system usernames.
+- Show availability feedback.
+- Show clear validation messages.
+- Allow username changes later, subject to availability.
+
+Example public URL:
+
+"anchrr.com/username"
+
+Use a configurable application base URL so local development and deployment can use different domains.
+
+---
+
+9. CREATOR DASHBOARD
+
+Create a premium, clean, easy-to-use creator dashboard.
+
+The dashboard must have persistent navigation and a consistent layout.
+
+Sidebar navigation
+
+Use these main navigation items:
+
+1. My BioSpace
+2. Smart Links
+3. Analytics
+4. Tracking & Integrations
+5. Settings
+
+Do not create an unnecessary Overview section.
+
+The creator should be able to access the major product areas without navigating through complicated menus.
+
+Dashboard design
+
+- Clean sidebar.
+- Main content area.
+- Top navigation/header.
+- Profile/account menu.
+- Notification area.
+- Responsive mobile navigation.
+- Consistent page layouts.
+- Useful empty states.
+- Loading states.
+- Error handling.
+
+Use the brand name Anchrr consistently throughout the application.
+
+---
+
+10. MY BIOSPACE — BIO LINKS & CREATOR PROFILES
+
+This is one of the core product areas.
+
+Create a dedicated My BioSpace workspace where creators can create, manage, customize, preview, and share their public bio profiles.
+
+Profile management
+
+A creator should be able to:
+
+- Create a profile.
+- Edit a profile.
+- View existing profiles.
+- Preview a profile.
+- Publish or unpublish a profile.
+- Manage profile content.
+- Share a profile.
+- Delete a profile with confirmation.
+
+Profile cards
+
+Display creator profiles as attractive profile cards.
+
+Each card should show relevant information such as:
+
+- Profile image.
+- Profile name.
+- Username.
+- Public profile URL.
+- Publication status.
+- Relevant profile actions.
+
+For the initial test plan, implement a Free Plan limit of 3 profile cards/profiles per creator.
+
+When the limit is reached:
+
+- Disable or restrict creating additional profiles.
+- Show a clear explanation.
+- Display an upgrade-oriented placeholder without implementing payment processing.
+
+Show attractive empty-state illustrations/cards for unused profile slots.
+
+Profile creation and editing
+
+When a creator opens the profile creation or editing screen, keep the dashboard sidebar visible.
+
+Do not unnecessarily navigate away from the dashboard shell.
+
+Use a modern application-style experience with persistent navigation and a dedicated content workspace.
+
+Creator profile fields
+
+Include the following editable fields:
+
+Basic profile
+
+- Full Name.
+- Username.
+- Profile URL.
+- Category.
+- Location.
+- Short Bio / Description.
+
+Images
+
+- Profile Picture.
+- Large Creator Image / Cover Image.
+- Background Image or Background Customization.
+
+Social media links
+Allow creators to add supported social media profiles with recognizable icons.
+
+Examples:
+
+- Instagram.
+- Facebook.
+- TikTok.
+- YouTube.
+- X.
+- LinkedIn.
+- Pinterest.
+- Snapchat.
+- WhatsApp.
+- Other configurable social links.
+
+Social links should support adding, editing, removing, and reordering.
+
+Custom links
+
+Creators should be able to create custom links containing:
+
+- Link Title.
+- Description.
+- Destination URL.
+- Optional Thumbnail/Image.
+- Display order.
+- Visibility status.
+
+Provide the ability to:
+
+- Add links.
+- Edit links.
+- Delete links.
+- Reorder links.
+- Enable/disable links.
+- Preview link appearance.
+
+Featured content
+
+Allow creators to display a featured link or post prominently.
+
+Include:
+
+- Featured Title.
+- Description.
+- Destination URL.
+- Featured Image.
+- Visibility and display settings.
+
+The featured section should be visually more prominent than ordinary links.
+
+Public creator page
+
+Every published profile should have its own public URL.
+
+Example:
+
+"anchrr.com/username"
+
+The public page should display:
+
+1. Profile background.
+2. Creator image/profile image.
+3. Creator name.
+4. Category.
+5. Location, when provided.
+6. Bio/description.
+7. Social media icons.
+8. Featured content.
+9. Custom links.
+10. Appropriate footer/branding.
+
+Public page design
+
+- Mobile-first.
+- Fast-loading.
+- Minimalist.
+- Attractive.
+- Easy to navigate.
+- High-quality typography.
+- Beautiful link cards.
+- Responsive images.
+- Clear click targets.
+
+The creator should be able to preview changes before publishing.
+
+Live updates
+
+When a creator saves social links, featured content, custom links, profile details, images, or other profile sections:
+
+- Save the changes to the database.
+- Update the dashboard UI immediately.
+- Update the preview without requiring a manual page reload.
+- Show appropriate saving/success/error feedback.
+- Avoid losing unsaved user changes.
+
+Use proper state management and database synchronization.
+
+Share popup
+
+Each profile card should have a Share action.
+
+On clicking Share, open a modern share popup/modal containing:
+
+- Public profile URL.
+- Copy Link action.
+- Share options supported by the browser/device.
+- Social sharing options where practical.
+- Clear success feedback after copying.
+
+Make this popup fully responsive.
+
+---
+
+11. SMART LINKS & URL SHORTENER
+
+Smart Links are the second major product pillar.
+
+Create a dedicated Smart Links workspace.
+
+The purpose is to let creators manage destination URLs, create short links, and eventually control how visitors are redirected.
+
+Basic shortener
+
+Implement:
+
+- Create a short link.
+- Enter destination URL.
+- Generate a unique short code.
+- Display the short URL.
+- Copy short URL.
+- Edit destination.
+- Delete link.
+- Enable/disable link.
+- View link details.
+- Track redirect clicks.
+
+Example:
+
+"anchrr.com/s/abc123"
+
+Link management dashboard
+
+Display useful information:
+
+- Link title.
+- Short URL.
+- Destination URL.
+- Created date.
+- Status.
+- Click count.
+- Actions.
+
+Provide search, filtering, and sorting where practical.
+
+Smart link capabilities
+
+Build a modular structure for these capabilities:
+
+- Geographic routing.
+- Device-based routing.
+- Scheduled links.
+- Link expiry.
+- Password protection.
+- UTM parameters.
+- Link rotation.
+- A/B destination testing.
+- Branded/custom domains.
+- QR code generation.
+- CTA/redirect options.
+
+Implement the basic working features that can be completed reliably in this test build.
+
+For capabilities requiring external services, domain verification, third-party credentials, or advanced infrastructure, create a clear UI and integration-ready architecture rather than pretending the feature is fully connected.
+
+Do not claim that a feature works if it is only a visual placeholder.
+
+Redirect system
+
+Short links must resolve through a proper backend redirect endpoint.
+
+Record click events before redirecting, without unnecessarily delaying the visitor.
+
+Validate destination URLs and protect against open-redirect abuse.
+
+---
+
+12. ANALYTICS WORKSPACE
+
+Analytics is the third major product pillar.
+
+Create a dedicated Analytics workspace with a professional, data-focused dashboard.
+
+The analytics architecture should be designed for future advanced reporting.
+
+Profile selector
+
+At the top of the analytics workspace, include a profile selector:
+
+- All Profiles.
+- Individual creator profiles.
+
+When the creator changes the selection, the same analytics dashboard should update to show the selected profile's data.
+
+Analytics overview
+
+Include:
+
+- Total profile views.
+- Total link clicks.
+- Unique visitors (estimated).
+- Click-through rate.
+- Traffic trends.
+- Top-performing links.
+- Top traffic sources.
+- Audience geography.
+- Device distribution.
+- Browser distribution.
+- Operating systems.
+
+Traffic sources
+
+Where information is available, identify traffic sources such as:
+
+- Instagram.
+- Facebook.
+- TikTok.
+- YouTube.
+- Search engines.
+- Direct traffic.
+- Referrals.
+- Other external sources.
+
+Use referrer and UTM information where available.
+
+Do not pretend every visitor source can always be identified.
+
+Audience information
+
+Display aggregated information such as:
+
+- Country.
+- Approximate city/region.
+- Device type.
+- Browser.
+- Operating system.
+- Visit time.
+
+Respect privacy and avoid claiming exact identity or precise location.
+
+Link performance
+
+Show performance for individual links:
+
+- Click count.
+- Unique click estimates.
+- Click trends.
+- Performance comparisons.
+- Link-level traffic sources.
+
+Visitor journeys
+
+Support two levels of reporting:
+
+A. Aggregate visitor journey
+
+Show the overall journey:
+
+1. Visitor comes from an external source.
+2. Visitor opens a creator's Anchrr profile.
+3. Visitor clicks a particular profile link.
+4. Visitor is redirected to the destination.
+
+B. Individual anonymous session journey
+
+Show an anonymous session identifier and its recorded events.
+
+Do not expose personally identifying visitor information.
+
+Use privacy-conscious identifiers and configurable retention.
+
+Real-time and processed analytics
+
+Support two distinct data experiences:
+
+- Real-time/live activity for recent events.
+- Processed analytics for more accurate reporting and aggregation.
+
+Clearly distinguish live estimates from processed figures.
+
+Reports
+
+Provide:
+
+- Dashboard reporting.
+- Date-range filtering.
+- Profile filtering.
+- PDF export.
+- CSV export.
+- Email-report configuration UI.
+
+Implement working exports where practical. Email reports must use a configured email provider; do not fake successful delivery.
+
+Future AI assistant
+
+Keep the analytics architecture extensible for a future AI Analytics Assistant.
+
+Do not prioritize implementing the AI assistant in this test build.
+
+---
+
+13. TRACKING & INTEGRATIONS
+
+Create a dedicated Tracking & Integrations section.
+
+Include a clean structure for:
+
+- Tracking Overview.
+- Tracking Pixel.
+- API Keys.
+- Connected Websites.
+- Integrations.
+- Event Manager.
+- Test Events.
+
+Tracking architecture
+
+The platform should distinguish between:
+
+- A click recorded by Anchrr.
+- An event received through an integration.
+- A conversion confirmed by an external system.
+
+Use understandable event statuses:
+
+- Tracked.
+- Click Recorded.
+- Integration Required.
+- Conversion Confirmed.
+
+Tracking limitations
+
+Do not claim that Anchrr can see what happens on an external website after redirecting a visitor unless that website provides tracking data through an installed pixel, API, webhook, postback, or supported integration.
+
+Design the architecture so future integrations with ecommerce platforms such as Shopify and WooCommerce can be added.
+
+Security
+
+- API secrets must never be exposed in frontend code.
+- Store secrets securely.
+- Show secret values only when appropriate.
+- Provide key creation and revocation controls.
+- Validate incoming events.
+- Protect tracking endpoints against abuse.
+
+If a third-party integration requires credentials, show its connection status and setup instructions instead of inventing a working connection.
+
+---
+
+14. SETTINGS
+
+Create a structured settings workspace.
+
+Include:
+
+Account settings
+
+- Full Name.
+- Email.
+- Username.
+- Profile information.
+
+Security
+
+- Change Password.
+- Active Sessions.
+- Logout from All Devices.
+
+Preferences
+
+- Timezone.
+- Date format.
+- Notification preferences.
+
+Account management
+
+- Account deletion.
+- Confirmation steps for destructive actions.
+
+Plan information
+
+- Current plan.
+- Profile usage.
+- Available profile limit.
+- Upgrade placeholder.
+
+Use the creator's timezone for displaying dates and analytics, while storing timestamps consistently in UTC.
+
+---
+
+15. DATABASE DESIGN
+
+Use Supabase PostgreSQL.
+
+Design a normalized, scalable database with appropriate relationships, indexes, constraints, and access policies.
+
+Potential entities/tables include:
+
+- users/profiles.
+- creator_profiles.
+- social_links.
+- custom_links.
+- featured_content.
+- smart_links.
+- link_redirects.
+- click_events.
+- profile_views.
+- visitor_sessions.
+- tracking_integrations.
+- tracking_events.
+- api_keys.
+- notification_preferences.
+
+Adapt the final schema to the actual implementation.
+
+Important database requirements
+
+- Every creator must only access their own private records.
+- Use Supabase Row Level Security.
+- Validate ownership on server-side operations.
+- Prevent unauthorized profile editing.
+- Enforce unique usernames.
+- Enforce profile limits on the backend, not just in the UI.
+- Store event timestamps in UTC.
+- Use indexes for commonly queried fields.
+- Avoid unnecessary duplicated records.
+- Keep analytics event storage separate from creator profile content where appropriate.
+
+Do not put private API keys or sensitive credentials in public tables.
+
+---
+
+16. SECURITY AND RELIABILITY
+
+Security must be part of the architecture from the beginning.
+
+Implement:
+
+- Authentication checks.
+- Authorization checks.
+- Row Level Security.
+- Server-side validation.
+- Input sanitization.
+- URL validation.
+- Safe redirects.
+- Secure file upload handling.
+- File type and size restrictions.
+- Rate limiting for sensitive endpoints where practical.
+- Secure environment variable handling.
+- Error handling without exposing secrets.
+- Confirmation for destructive actions.
+
+Never trust frontend-only restrictions.
+
+A creator must not be able to access or modify another creator's data by changing an ID or URL.
+
+---
+
+17. STORAGE AND MEDIA
+
+Use Supabase Storage for creator-uploaded media.
+
+Support:
+
+- Profile images.
+- Cover/background images.
+- Featured content images.
+- Custom link thumbnails.
+
+Implement:
+
+- Upload progress.
+- Image preview.
+- Replace image.
+- Remove image.
+- Validation.
+- Useful error messages.
+
+Optimize displayed images for performance.
+
+---
+
+18. EMPTY STATES, LOADING STATES, AND INTERACTIONS
+
+Every major workspace must have thoughtful states.
+
+Examples:
+
+- No profiles created yet.
+- No smart links created yet.
+- No analytics available yet.
+- No connected integrations.
+- Loading profile.
+- Saving changes.
+- Uploading image.
+- Verification required.
+- Invalid login.
+- Expired reset link.
+- Username unavailable.
+- Profile limit reached.
+
+Every visible button must perform its intended action.
+
+Do not create decorative buttons that do nothing.
+
+Use clear feedback for:
+
+- Successful actions.
+- Failed actions.
+- Validation errors.
+- Loading operations.
+- Destructive actions.
+
+---
+
+19. DEMO DATA AND TESTING
+
+The application must be testable.
+
+Where a creator has no real data, use a clearly identified demo/empty state.
+
+If demo data is used:
+
+- Mark it as sample data.
+- Do not mix fake analytics with real user analytics.
+- Do not display sample conversions as real conversions.
+- Provide a clear way to distinguish test data.
+
+Test the complete journey:
+
+1. Open Anchrr homepage.
+2. Sign up with email/password.
+3. Verify email.
+4. Complete onboarding.
+5. Enter creator dashboard.
+6. Open My BioSpace.
+7. Create a profile.
+8. Upload profile and cover images.
+9. Add social links.
+10. Add custom links.
+11. Add featured content.
+12. Preview the public profile.
+13. Publish the profile.
+14. Open the public profile URL.
+15. Click profile links.
+16. Create a short link.
+17. Test the short-link redirect.
+18. Review recorded analytics.
+19. Open settings.
+20. Test responsive layouts on mobile.
+
+Also test validation, access control, error handling, and profile limits.
+
+---
+
+20. DEVELOPMENT APPROACH
+
+Build this as an integrated application, not separate disconnected demos.
+
+Recommended implementation sequence:
+
+Stage 1 — Foundation
+
+- Project setup.
+- Design system.
+- Supabase connection.
+- Database schema.
+- Authentication.
+- Public website.
+
+Stage 2 — Creator Dashboard
+
+- Dashboard shell.
+- Responsive navigation.
+- Account settings.
+- Onboarding.
+
+Stage 3 — My BioSpace
+
+- Profile management.
+- Profile creation/editing.
+- Social links.
+- Custom links.
+- Featured content.
+- Image uploads.
+- Public creator pages.
+- Share functionality.
+
+Stage 4 — Smart Links
+
+- Short URL generation.
+- Redirect endpoint.
+- Link management.
+- Click recording.
+- Basic smart-link functionality.
+
+Stage 5 — Analytics
+
+- Event collection.
+- Profile views.
+- Link clicks.
+- Aggregated analytics.
+- Visitor journeys.
+- Reports.
+
+Stage 6 — Tracking & Integrations
+
+- Tracking workspace.
+- Integration-ready architecture.
+- API key management.
+- Event management.
+
+Stage 7 — Quality Assurance
+
+- Security checks.
+- Mobile responsiveness.
+- Functional testing.
+- Error handling.
+- Performance improvements.
+
+Do not sacrifice functionality just to complete all screens quickly.
+
+Prioritize a reliable working foundation and then connect each module properly.
+
+---
+
+21. FINAL QUALITY EXPECTATIONS
+
+The completed test build should demonstrate:
+
+- A professional SaaS landing website.
+- Functional creator signup and login.
+- Mandatory email verification for email/password accounts.
+- Google authentication.
+- Creator onboarding.
+- A premium responsive dashboard.
+- My BioSpace profile management.
+- Working public creator pages.
+- Working social links and custom links.
+- Profile sharing.
+- Basic functional URL shortening.
+- Redirect click recording.
+- A connected analytics dashboard.
+- A Tracking & Integrations workspace.
+- Secure account management.
+- A responsive mobile experience.
+
+Non-negotiable requirements
+
+1. Build a real web application.
+2. Do not deliver only static HTML screens.
+3. Do not use fake buttons or dead interactions.
+4. Do not hardcode user-specific data.
+5. Do not expose private credentials.
+6. Do not bypass database security.
+7. Do not mix demo analytics with real analytics.
+8. Do not claim incomplete integrations are operational.
+9. Do not compromise mobile responsiveness.
+10. Do not make the UI unnecessarily complicated.
+
+Replit execution instructions
+
+Start by inspecting the project environment and preparing the application architecture.
+
+Then implement the application in a structured manner.
+
+If credentials or external service configuration are needed, identify the exact environment variables and provide clear setup instructions.
+
+Keep the application runnable throughout development.
+
+At the end:
+
+- Verify that the application starts successfully.
+- Check all major routes.
+- Test authentication and database connectivity.
+- Test core creator workflows.
+- Test the public profile URLs.
+- Test short-link redirects.
+- Test mobile layouts.
+- List completed features.
+- List incomplete or simulated integrations honestly.
+- Explain any required environment configuration.
+
+The goal is to produce the strongest practical Anchrr SaaS test build possible in Replit, with a premium user experience, functional workflows, a secure backend, and a scalable foundation.
